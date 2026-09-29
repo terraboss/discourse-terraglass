@@ -4,37 +4,33 @@ A clean, modern Discourse theme built around translucent, frosted-glass surfaces
 
 ## Features
 
-- **Frosted glass surfaces** — header, sidebar/hamburger menu, and the header search field/dropdown are semi-transparent with a backdrop blur, all opacity and blur strength configurable.
-- **X/Twitter-style link previews** — onebox cards get a hairline border and rounded corners instead of Discourse's default box-shadow look.
-- **Considered color schemes** — separate, purpose-built light and dark palettes (not just an inverted single scheme), checked against WCAG AA contrast for text and UI elements.
-- **Etiquette-style tags** — tags render with an arrow/flag shape instead of plain pills.
-- **Fixed-ratio video embeds** — YouTube and other video oneboxes render at a consistent 16:9 on every device.
-- **Zebra-striped topic list** with a subtle hover state.
-- **Configurable corner rounding** applied consistently across buttons, cards, modals and inputs.
-- **Accessible focus outline** using the scheme's own text color, so it's always visible regardless of light/dark mode.
-- Everything above is a theme setting you can turn off or tune — nothing is forced.
+- **Frosted glass look** — the header, sidebar and search field are semi-transparent with a soft blur, so the page shows through faintly instead of a solid bar. Opacity and blur strength are both adjustable.
+- **Light and dark color schemes** — designed as a matching pair, not just one scheme inverted, and checked for good text contrast in both.
+- **Nicer link previews** — link cards (oneboxes) get a thin border and rounded corners, similar to how X/Twitter shows link previews.
+- **Flag-shaped tags** instead of plain pill-shaped labels.
+- **Consistent video size** — embedded videos always keep a 16:9 shape, on any device.
+- **Striped topic list** with a subtle hover highlight.
+- **Adjustable corner rounding** across buttons, cards, modals and input fields.
+- **Clear focus outline** for keyboard navigation, using the scheme's own text color so it's always visible.
+- Every feature above is a theme setting — turn off or fine-tune anything you don't want.
 
 ## Installation
-
-**Option A — install from this repository (recommended):**
 
 In your Discourse admin, go to *Customize → Themes → Install → From a git repository* and paste:
 
 ```
-https://github.com/terraboss/terraglass
+https://github.com/terraboss/discourse-terraglass
 ```
 
-This lets you pull future updates with a single click ("Check for updates") instead of re-uploading a file.
-
-**Option B — install from a downloaded file:**
-
-Download this repository as a ZIP (Code → Download ZIP) and re-zip its contents so `about.json` sits at the root of the archive (not nested in a subfolder), then import it under *Customize → Themes → Install → From a file*.
+This also gives you one-click "Check for updates" going forward.
 
 ## Light/dark mode
 
-This theme ships two color schemes, **Terraglass Light** and **Terraglass Dark**. To have Discourse switch automatically based on the visitor's system setting:
+This theme ships two color schemes, **Terraglass Light** and **Terraglass Dark**. You can pick either one directly under *Customize → Colors*.
 
-1. *Customize → Colors*, select **Terraglass Light**, and set it as the default/light scheme.
+To have Discourse switch between them automatically based on the visitor's system setting:
+
+1. Select **Terraglass Light** and set it as the default/light scheme.
 2. Select **Terraglass Dark** and mark it as the dark-mode scheme (the option sits next to the color palette list).
 
 No separate "dark mode" component needed — this is handled natively by Discourse.
@@ -58,14 +54,6 @@ No separate "dark mode" component needed — this is handled natively by Discour
 | `transparent_sidebar` | on | Semi-transparent, blurred sidebar/hamburger menu. |
 | `sidebar_opacity` | `85` | Sidebar opacity in %. Kept higher than the header so menu items stay legible. |
 | `sidebar_blur` | `6` | Sidebar backdrop blur strength (px). |
-
-## Known issue
-
-`backdrop-filter` (the blur behind the sidebar, hamburger menu and search panel) doesn't render in every browser/Discourse combination, even though the transparency itself works reliably. Background transparency degrades gracefully on its own if this affects you. Tracked upstream: [meta.discourse.org/t/413534](https://meta.discourse.org/t/backdrop-filter-blur-has-no-effect-on-menu-panel-even-though-background-transparency-works/413534).
-
-## Credits
-
-Thanks to the Discourse team for pointing out the extra background layers on the search input and read-notification rows that needed separate overrides.
 
 ## License
 

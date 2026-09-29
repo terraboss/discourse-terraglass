@@ -1,10 +1,10 @@
 {
   "name": "Terraglass",
   "component": false,
-  "license_url": "https://github.com/terraboss/terraglass/blob/main/LICENSE",
-  "about_url": "https://github.com/terraboss/terraglass",
+  "license_url": "https://github.com/terraboss/discourse-terraglass/blob/main/LICENSE",
+  "about_url": "https://github.com/terraboss/discourse-terraglass",
   "authors": "terraboss",
-  "theme_version": "1.0.0",
+  "theme_version": "1.0.1",
   "minimum_discourse_version": "3.3.0",
   "maximum_discourse_version": null,
   "assets": {},

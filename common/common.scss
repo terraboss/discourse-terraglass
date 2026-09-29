@@ -11,7 +11,7 @@
   --tg-zebra: color-mix(in srgb, var(--primary) 3%, var(--secondary));
 }
 
-// --- Navigation tabs (Latest / Top / Categories ...) -------------------------
+// --- Navigation tabs (Latest / Top / Categories ...) --------------------------
 
 .nav-pills > li > a,
 .nav-pills > li > button {
@@ -36,7 +36,7 @@
   border-bottom-color: var(--tertiary);
 }
 
-// --- List controls (filters, category picker) --------------------------------
+// --- List controls (filters, category picker) ---------------------------------
 
 .list-controls,
 .navigation-container {
@@ -118,10 +118,25 @@ textarea {
 // --- Transparent header ---------------------------------------------------------
 
 @if $transparent_header {
+  // backdrop-filter applied directly to .d-header makes it the filter's
+  // stacking root, which then caps backdrop-filter on descendant panels
+  // (sidebar, search dropdown) to whatever is inside that root instead of
+  // the real page behind them. Moving the blur to a ::before pseudo-element
+  // keeps the header itself free of backdrop-filter so descendants can blur
+  // the actual page background.
   .d-header {
+    position: relative;
+    z-index: 0;
     background-color: color-mix(in srgb, var(--header_background) #{$header_opacity + '%'}, transparent);
-    -webkit-backdrop-filter: blur(#{$header_blur}px) saturate(1.2);
-    backdrop-filter: blur(#{$header_blur}px) saturate(1.2);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      -webkit-backdrop-filter: blur(#{$header_blur}px) saturate(1.2);
+      backdrop-filter: blur(#{$header_blur}px) saturate(1.2);
+    }
   }
 }
 
@@ -131,13 +146,25 @@ textarea {
 @if $transparent_sidebar {
   // Core sets the background directly on .menu-panel / .sidebar-wrapper rather
   // than on a child element, so these are overridden directly instead of a
-  // nested selector.
+  // nested selector. Same reasoning as .d-header above: the blur moves to a
+  // ::before pseudo-element so nested panels (search input, sidebar wrapper)
+  // keep working with their own backdrop-filter.
   .menu-panel {
+    position: relative;
+    z-index: 0;
     background-color: color-mix(in srgb, var(--header_background) #{$sidebar_opacity + '%'}, transparent) !important;
-    -webkit-backdrop-filter: blur(#{$sidebar_blur}px) saturate(1.2);
-    backdrop-filter: blur(#{$sidebar_blur}px) saturate(1.2);
     border-radius: #{$onebox_radius}px;
     box-shadow: 0 0 0 1px var(--primary-low-mid);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: inherit;
+      -webkit-backdrop-filter: blur(#{$sidebar_blur}px) saturate(1.2);
+      backdrop-filter: blur(#{$sidebar_blur}px) saturate(1.2);
+    }
   }
 
   @container style(--scheme-type: dark) {
