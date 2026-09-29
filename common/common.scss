@@ -126,7 +126,7 @@ textarea {
   // the actual page background.
   .d-header {
     position: relative;
-    z-index: 0;
+    isolation: isolate;
     background-color: color-mix(in srgb, var(--header_background) #{$header_opacity + '%'}, transparent);
 
     &::before {
@@ -151,7 +151,7 @@ textarea {
   // keep working with their own backdrop-filter.
   .menu-panel {
     position: relative;
-    z-index: 0;
+    isolation: isolate;
     background-color: color-mix(in srgb, var(--header_background) #{$sidebar_opacity + '%'}, transparent) !important;
     border-radius: #{$onebox_radius}px;
     box-shadow: 0 0 0 1px var(--primary-low-mid);

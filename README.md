@@ -52,8 +52,8 @@ No separate "dark mode" component needed — this is handled natively by Discour
 | `pretty_oneboxes` | on | Hairline-bordered, rounded link preview cards. |
 | `onebox_radius` | `14` | Corner radius (px) of onebox cards. |
 | `transparent_sidebar` | on | Semi-transparent, blurred sidebar/hamburger menu. |
-| `sidebar_opacity` | `85` | Sidebar opacity in %. Kept higher than the header so menu items stay legible. |
-| `sidebar_blur` | `6` | Sidebar backdrop blur strength (px). |
+| `sidebar_opacity` | `70` | Sidebar opacity in %. Kept higher than the header so menu items stay legible. |
+| `sidebar_blur` | `5` | Sidebar backdrop blur strength (px). |
 
 ## License
 
