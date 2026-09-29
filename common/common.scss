@@ -227,7 +227,8 @@ textarea {
   // their own opaque background in core, independent of the panel itself.
   .user-notifications-list .read,
   .user-notifications-list .bookmark,
-  .user-menu .quick-access-panel .read {
+  .user-menu .quick-access-panel .read,
+  .user-menu .quick-access-panel .bookmark {
     background-color: transparent !important;
   }
 }

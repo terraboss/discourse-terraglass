@@ -45,15 +45,15 @@ No separate "dark mode" component needed — this is handled natively by Discour
 | `composer_accent` | on | Color the composer's resize handle in the accent color. |
 | `hide_uncategorized_in_menu` | on | Hide the "Uncategorized" entry from the hamburger menu (topics stay visible in lists). |
 | `transparent_header` | on | Semi-transparent, blurred header. |
-| `header_opacity` | `50` | Header opacity in %. |
+| `header_opacity` | `20` | Header opacity in %. |
 | `header_blur` | `3` | Header backdrop blur strength (px). |
 | `pretty_tags` | on | Flag/arrow-shaped tags instead of plain pills. |
 | `pretty_videos` | on | Fixed 16:9 video embeds on every device. |
 | `pretty_oneboxes` | on | Hairline-bordered, rounded link preview cards. |
 | `onebox_radius` | `14` | Corner radius (px) of onebox cards. |
 | `transparent_sidebar` | on | Semi-transparent, blurred sidebar/hamburger menu. |
-| `sidebar_opacity` | `70` | Sidebar opacity in %. Kept higher than the header so menu items stay legible. |
-| `sidebar_blur` | `5` | Sidebar backdrop blur strength (px). |
+| `sidebar_opacity` | `80` | Sidebar opacity in %. Kept higher than the header so menu items stay legible. |
+| `sidebar_blur` | `3` | Sidebar backdrop blur strength (px). |
 
 ## License
 
