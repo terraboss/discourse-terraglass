@@ -1,0 +1,39 @@
+{
+  "name": "Terraglass",
+  "component": false,
+  "license_url": "https://github.com/terraboss/terraglass/blob/main/LICENSE",
+  "about_url": "https://github.com/terraboss/terraglass",
+  "authors": "terraboss",
+  "theme_version": "1.0.0",
+  "minimum_discourse_version": "3.3.0",
+  "maximum_discourse_version": null,
+  "assets": {},
+  "color_schemes": {
+    "Terraglass Light": {
+      "primary": "252938",
+      "secondary": "ffffff",
+      "tertiary": "c8401f",
+      "quaternary": "3f66d8",
+      "header_background": "ffffff",
+      "header_primary": "252938",
+      "highlight": "fde6c8",
+      "danger": "c8401f",
+      "success": "2f8f4e",
+      "love": "de655e"
+    },
+    "Terraglass Dark": {
+      "primary": "e4e7f0",
+      "secondary": "17202a",
+      "tertiary": "ff7a52",
+      "quaternary": "8fb0ff",
+      "header_background": "1e2733",
+      "header_primary": "e4e7f0",
+      "highlight": "3d2c22",
+      "danger": "e6675c",
+      "success": "6fcf8a",
+      "love": "ff8f88"
+    }
+  },
+  "modifiers": {},
+  "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
+}

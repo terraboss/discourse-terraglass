@@ -1,0 +1,331 @@
+// ==========================================================================
+// Terraglass
+// All colors come from the active color scheme (light/dark); nothing here
+// is hardcoded. Values are configurable via theme settings (settings.yml).
+// ==========================================================================
+
+:root {
+  --tg-radius: #{$corner_radius}px;
+  --tg-line: var(--primary-low);
+  --tg-hover: color-mix(in srgb, var(--tertiary) 7%, var(--secondary));
+  --tg-zebra: color-mix(in srgb, var(--primary) 3%, var(--secondary));
+}
+
+// --- Navigation tabs (Latest / Top / Categories ...) -------------------------
+
+.nav-pills > li > a,
+.nav-pills > li > button {
+  background: transparent;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  color: var(--primary-medium);
+  transition: color 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    background: transparent;
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+  }
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li > a.active,
+.nav-pills > li.active > button {
+  background: transparent;
+  color: var(--primary);
+  border-bottom-color: var(--tertiary);
+}
+
+// --- List controls (filters, category picker) --------------------------------
+
+.list-controls,
+.navigation-container {
+  .btn-default,
+  .select-kit .select-kit-header {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary-low-mid);
+    border-radius: var(--tg-radius);
+
+    .d-icon { color: var(--primary-medium); }
+
+    &:hover,
+    &.is-focused,
+    &.is-expanded {
+      background: transparent;
+      color: var(--tertiary);
+      border-color: currentcolor;
+
+      .d-icon { color: var(--tertiary); }
+    }
+  }
+}
+
+// --- Buttons, inputs, cards ---------------------------------------------------
+
+.btn,
+.d-modal__container,
+.select-kit .select-kit-body,
+.fk-d-menu__inner-content,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea {
+  border-radius: var(--tg-radius);
+}
+
+.category-list .category-box,
+.category-boxes .category-box {
+  border-radius: var(--tg-radius);
+}
+
+// --- Topic list ----------------------------------------------------------------
+
+@if $topic_list_zebra {
+  .topic-list {
+    .topic-list-item {
+      transition: background-color 0.15s ease;
+
+      &:nth-child(even) {
+        background-color: var(--tg-zebra);
+      }
+
+      &:hover {
+        background-color: var(--tg-hover);
+      }
+    }
+  }
+}
+
+// --- Composer --------------------------------------------------------------------
+
+@if $composer_accent {
+  #reply-control .grippie,
+  .open .grippie {
+    background: var(--tertiary);
+  }
+}
+
+// --- Legacy hamburger menu: top-level categories only -------------------------
+
+@if $hide_subcategories_in_hamburger {
+  .category-links .category-link.subcategory {
+    display: none;
+  }
+}
+
+// --- Transparent header ---------------------------------------------------------
+
+@if $transparent_header {
+  .d-header {
+    background-color: color-mix(in srgb, var(--header_background) #{$header_opacity + '%'}, transparent);
+    -webkit-backdrop-filter: blur(#{$header_blur}px) saturate(1.2);
+    backdrop-filter: blur(#{$header_blur}px) saturate(1.2);
+  }
+}
+
+// --- Transparent sidebar / hamburger menu ---------------------------------------
+// Covers the persistent desktop sidebar and the slide-out mobile/tablet panel.
+
+@if $transparent_sidebar {
+  // Core sets the background directly on .menu-panel / .sidebar-wrapper rather
+  // than on a child element, so these are overridden directly instead of a
+  // nested selector.
+  .menu-panel {
+    background-color: color-mix(in srgb, var(--header_background) #{$sidebar_opacity + '%'}, transparent) !important;
+    -webkit-backdrop-filter: blur(#{$sidebar_blur}px) saturate(1.2);
+    backdrop-filter: blur(#{$sidebar_blur}px) saturate(1.2);
+    border-radius: #{$onebox_radius}px;
+    box-shadow: 0 0 0 1px var(--primary-low-mid);
+  }
+
+  @container style(--scheme-type: dark) {
+    .menu-panel {
+      box-shadow: 0 0 0 1px #455262;
+    }
+  }
+
+  // The header search field is its own element, not part of .menu-panel, and
+  // its visible border/focus ring belongs to .search-input rather than its
+  // wrapper (which has no border-radius or background of its own). Both
+  // .search-menu and .search-menu-container are covered since core nests the
+  // input under different ancestors depending on context.
+  .search-menu .search-input,
+  .search-menu-container .search-input {
+    background: color-mix(in srgb, var(--header_background) #{$sidebar_opacity + '%'}, transparent) !important;
+    -webkit-backdrop-filter: blur(#{$sidebar_blur}px) saturate(1.2);
+    backdrop-filter: blur(#{$sidebar_blur}px) saturate(1.2);
+    border-radius: #{$onebox_radius}px !important;
+    box-shadow: 0 0 0 1px var(--primary-low-mid) !important;
+    border: none !important;
+  }
+
+  @container style(--scheme-type: dark) {
+    .search-menu .search-input,
+    .search-menu-container .search-input {
+      box-shadow: 0 0 0 1px #455262 !important;
+    }
+  }
+
+  // The nested .results element inside the search panel sets its own opaque
+  // background independently of .menu-panel.
+  .search-menu-panel .results {
+    background: transparent !important;
+  }
+
+  // Core's default hover background for suggestion rows doesn't adapt to the
+  // dark scheme, so it's overridden with a scheme-aware tint.
+  .search-menu-panel .search-link {
+    &:hover,
+    &:focus,
+    &.focused {
+      background-color: color-mix(in srgb, var(--primary) 8%, transparent) !important;
+      color: var(--primary) !important;
+    }
+  }
+
+  .sidebar-wrapper {
+    background-color: color-mix(in srgb, var(--header_background) #{$sidebar_opacity + '%'}, transparent) !important;
+    -webkit-backdrop-filter: blur(#{$sidebar_blur}px) saturate(1.2);
+    backdrop-filter: blur(#{$sidebar_blur}px) saturate(1.2);
+  }
+
+  // Sidebar footer (profile/login area) has its own opaque background in core.
+  .hamburger-panel .sidebar-footer-wrapper .sidebar-footer-container {
+    background: color-mix(in srgb, var(--header_background) #{$sidebar_opacity + '%'}, transparent) !important;
+  }
+
+  // Individual rows in the user menu (read notifications, bookmarks) carry
+  // their own opaque background in core, independent of the panel itself.
+  .user-notifications-list .read,
+  .user-notifications-list .bookmark,
+  .user-menu .quick-access-panel .read {
+    background-color: transparent !important;
+  }
+}
+
+// --- Tags as flag-shaped labels --------------------------------------------------
+
+@if $pretty_tags {
+  .discourse-tag.bullet::before {
+    font-size: 1em;
+    top: 0;
+    margin-right: 3px;
+    content: "\f02b";
+    color: var(--primary-low-mid);
+  }
+
+  .discourse-tag.box {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: normal;
+    background-color: color-mix(in srgb, var(--tertiary) 22%, white) !important;
+    color: color-mix(in srgb, var(--tertiary) 55%, black) !important;
+    border-radius: 3px 0 0 3px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 16px 0 21px;
+    margin: 0 10px 0 0;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%);
+
+    &::before {
+      position: absolute;
+      content: "";
+      background: color-mix(in srgb, var(--tertiary) 55%, black);
+      border-radius: 100%;
+      height: 6px;
+      width: 6px;
+      left: 7px;
+      top: 7px;
+      opacity: 0.35;
+    }
+
+    // Don't clip the focus ring for keyboard users.
+    &:focus-visible {
+      clip-path: none;
+    }
+  }
+}
+
+// --- Video embeds at 16:9 ----------------------------------------------------------
+
+@if $pretty_videos {
+  .lazyYT,
+  .onebox.video-onebox,
+  .video-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+
+    iframe,
+    video {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// --- Onebox link preview cards -----------------------------------------------------
+
+@if $pretty_oneboxes {
+  aside.onebox {
+    // Core draws the card border/radius via these custom properties rather
+    // than a plain border (see onebox.scss), so they're set directly instead
+    // of fighting that technique with a border override.
+    --d-border-radius: #{$onebox_radius}px;
+    --onebox-border-color: var(--primary-low-mid);
+
+    img {
+      border-radius: #{max($onebox_radius - 6, 0)}px !important;
+    }
+
+    header.source {
+      border-bottom: none;
+    }
+
+    &:hover {
+      --onebox-border-color: var(--primary-medium);
+    }
+  }
+
+  aside.onebox.allowlistedgeneric,
+  aside.onebox.wikipediaonebox {
+    .onebox-body {
+      border-radius: 0;
+    }
+  }
+
+  // Container style queries read core's --scheme-type property, scoping this
+  // to the dark scheme only.
+  @container style(--scheme-type: dark) {
+    aside.onebox {
+      --onebox-border-color: #455262;
+
+      &:hover {
+        --onebox-border-color: #5a6b80;
+      }
+    }
+  }
+}
+
+@if $hide_uncategorized_in_menu {
+  .category-links .category-uncategorized {
+    display: none;
+  }
+}
+
+// --- Accessibility -------------------------------------------------------------------
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

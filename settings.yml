@@ -1,0 +1,86 @@
+corner_radius:
+  type: integer
+  default: 5
+  min: 0
+  max: 20
+  description: "Corner rounding of buttons, cards and inputs, in pixels (0 = square)."
+
+topic_list_zebra:
+  type: bool
+  default: true
+  description: "Subtle zebra striping and hover effect on the topic list."
+
+hide_subcategories_in_hamburger:
+  type: bool
+  default: false
+  description: "Hide subcategories in the classic hamburger menu. Usually unneeded once the sidebar is active."
+
+composer_accent:
+  type: bool
+  default: true
+  description: "Color the composer's resize handle in the accent color."
+
+hide_uncategorized_in_menu:
+  type: bool
+  default: true
+  description: "Hide the \"Uncategorized\" entry from the hamburger menu (topics stay visible in lists)."
+
+transparent_header:
+  type: bool
+  default: true
+  description: "Semi-transparent header with a blur effect (content shows faintly through it)."
+
+header_opacity:
+  type: integer
+  default: 50
+  min: 0
+  max: 100
+  description: "Header opacity in percent (100 = opaque, lower = more transparent)."
+
+header_blur:
+  type: integer
+  default: 3
+  min: 0
+  max: 20
+  description: "Backdrop blur strength behind the transparent header, in pixels."
+
+pretty_tags:
+  type: bool
+  default: true
+  description: "Render tags as arrow/flag-shaped labels (colors follow the active color scheme, including dark mode)."
+
+pretty_videos:
+  type: bool
+  default: true
+  description: "Show embedded videos (YouTube and other video oneboxes) at a fixed 16:9 ratio on every device."
+
+pretty_oneboxes:
+  type: bool
+  default: true
+  description: "Render link previews (oneboxes, e.g. Wikipedia) as hairline-bordered, rounded cards, in an X/Twitter-like style."
+
+onebox_radius:
+  type: integer
+  default: 14
+  min: 0
+  max: 24
+  description: "Corner radius of onebox cards, in pixels."
+
+transparent_sidebar:
+  type: bool
+  default: true
+  description: "Semi-transparent sidebar/hamburger menu with a blur effect, matching the header."
+
+sidebar_opacity:
+  type: integer
+  default: 85
+  min: 50
+  max: 100
+  description: "Sidebar opacity in percent. Kept lower than the header so menu items stay legible."
+
+sidebar_blur:
+  type: integer
+  default: 6
+  min: 0
+  max: 20
+  description: "Backdrop blur strength behind the sidebar, in pixels."
