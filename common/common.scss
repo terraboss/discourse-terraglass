@@ -4,6 +4,13 @@
 // is hardcoded. Values are configurable via theme settings (settings.yml).
 // ==========================================================================
 
+// Discourse passes every theme setting to SCSS as an unquoted string, so a
+// disabled bool arrives as the string "false", which Sass treats as truthy.
+// tg-on() checks the actual value instead.
+@function tg-on($value) {
+  @return $value == true or "#{$value}" == "true";
+}
+
 :root {
   --tg-radius: #{$corner_radius}px;
   --tg-line: var(--primary-low);
@@ -82,7 +89,7 @@ textarea {
 
 // --- Topic list ----------------------------------------------------------------
 
-@if $topic_list_zebra {
+@if tg-on($topic_list_zebra) {
   .topic-list {
     .topic-list-item {
       transition: background-color 0.15s ease;
@@ -100,7 +107,7 @@ textarea {
 
 // --- Composer --------------------------------------------------------------------
 
-@if $composer_accent {
+@if tg-on($composer_accent) {
   #reply-control .grippie,
   .open .grippie {
     background: var(--tertiary);
@@ -109,7 +116,7 @@ textarea {
 
 // --- Legacy hamburger menu: top-level categories only -------------------------
 
-@if $hide_subcategories_in_hamburger {
+@if tg-on($hide_subcategories_in_hamburger) {
   .category-links .category-link.subcategory {
     display: none;
   }
@@ -134,7 +141,7 @@ textarea {
   @return true;
 }
 
-@if $header_tint {
+@if tg-on($header_tint) {
   $tg-tint: var(--tertiary);
 
   @if $header_tint_source == custom {
@@ -155,7 +162,7 @@ textarea {
 
 // --- Transparent header ---------------------------------------------------------
 
-@if $transparent_header {
+@if tg-on($transparent_header) {
   // backdrop-filter applied directly to .d-header makes it the filter's
   // stacking root, which then caps backdrop-filter on descendant panels
   // (sidebar, search dropdown) to whatever is inside that root instead of
@@ -181,7 +188,7 @@ textarea {
 // --- Transparent sidebar / hamburger menu ---------------------------------------
 // Covers the persistent desktop sidebar and the slide-out mobile/tablet panel.
 
-@if $transparent_sidebar {
+@if tg-on($transparent_sidebar) {
   // Core sets the background directly on .menu-panel / .sidebar-wrapper rather
   // than on a child element, so these are overridden directly instead of a
   // nested selector. Same reasoning as .d-header above: the blur moves to a
@@ -273,7 +280,7 @@ textarea {
 
 // --- Tags as flag-shaped labels --------------------------------------------------
 
-@if $pretty_tags {
+@if tg-on($pretty_tags) {
   .discourse-tag.bullet::before {
     font-size: 1em;
     top: 0;
@@ -317,7 +324,7 @@ textarea {
 
 // --- Video embeds at 16:9 ----------------------------------------------------------
 
-@if $pretty_videos {
+@if tg-on($pretty_videos) {
   .lazyYT,
   .onebox.video-onebox,
   .video-container {
@@ -335,7 +342,7 @@ textarea {
 
 // --- Onebox link preview cards -----------------------------------------------------
 
-@if $pretty_oneboxes {
+@if tg-on($pretty_oneboxes) {
   aside.onebox {
     // Core draws the card border/radius via these custom properties rather
     // than a plain border (see onebox.scss), so they're set directly instead
@@ -344,7 +351,7 @@ textarea {
     --onebox-border-color: var(--primary-low-mid);
 
     img {
-      border-radius: #{max($onebox_radius - 6, 0)}px !important;
+      border-radius: max(calc(#{$onebox_radius}px - 6px), 0px) !important;
     }
 
     header.source {
@@ -376,7 +383,7 @@ textarea {
   }
 }
 
-@if $hide_uncategorized_in_menu {
+@if tg-on($hide_uncategorized_in_menu) {
   .category-links .category-uncategorized {
     display: none;
   }
