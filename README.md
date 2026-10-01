@@ -5,6 +5,7 @@ A clean, modern Discourse theme built around translucent, frosted-glass surfaces
 ## Features
 
 - **Frosted glass look** — the header, sidebar and search field are semi-transparent with a soft blur, so the page shows through faintly instead of a solid bar. Opacity and blur strength are both adjustable.
+- **Optional header tint** — give the header a subtle color of your choice. Either follows the accent color of the active color scheme (switching along with light/dark) or uses any custom color, with adjustable strength. In Safari, the browser's toolbar area is tinted to match. Off by default.
 - **Light and dark color schemes** — designed as a matching pair, not just one scheme inverted, and checked for good text contrast in both.
 - **Nicer link previews** — link cards (oneboxes) get a thin border and rounded corners, similar to how X/Twitter shows link previews.
 - **Flag-shaped tags** instead of plain pill-shaped labels.
@@ -47,6 +48,10 @@ No separate "dark mode" component needed — this is handled natively by Discour
 | `transparent_header` | on | Semi-transparent, blurred header. |
 | `header_opacity` | `20` | Header opacity in %. |
 | `header_blur` | `3` | Header backdrop blur strength (px). |
+| `header_tint` | off | Tint the header with an accent color. |
+| `header_tint_source` | `auto` | `auto` follows the active color scheme's accent color; `custom` uses `header_tint_color`. |
+| `header_tint_color` | `#c8401f` | Tint color for `custom` mode. Any CSS color. |
+| `header_tint_strength` | `15` | Tint strength in % (0 = none, 100 = solid). |
 | `pretty_tags` | on | Flag/arrow-shaped tags instead of plain pills. |
 | `pretty_videos` | on | Fixed 16:9 video embeds on every device. |
 | `pretty_oneboxes` | on | Hairline-bordered, rounded link preview cards. |

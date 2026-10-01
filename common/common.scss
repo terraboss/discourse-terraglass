@@ -115,6 +115,44 @@ textarea {
   }
 }
 
+// --- Header tint ----------------------------------------------------------------
+// Lays an accent-colored layer over the header background. "auto" uses the
+// active scheme's --tertiary so the tint follows light/dark switching; "custom"
+// uses the color from the settings. The tint is a separate background layer
+// rather than mixed into the base color, so its strength stays independent of
+// header_opacity.
+
+@function tg-is-hex($s) {
+  @if str-length($s) < 3 {
+    @return false;
+  }
+  @for $i from 1 through str-length($s) {
+    @if not str-index("0123456789abcdefABCDEF", str-slice($s, $i, $i)) {
+      @return false;
+    }
+  }
+  @return true;
+}
+
+@if $header_tint {
+  $tg-tint: var(--tertiary);
+
+  @if $header_tint_source == custom {
+    // Accept hex values with or without a leading "#", as well as any other
+    // CSS color syntax.
+    $tg-c: "#{$header_tint_color}";
+    @if str-slice($tg-c, 1, 1) != "#" and tg-is-hex($tg-c) {
+      $tg-c: "#" + $tg-c;
+    }
+    $tg-tint: unquote($tg-c);
+  }
+
+  .d-header {
+    --tg-header-tint: color-mix(in srgb, #{$tg-tint} #{$header_tint_strength + '%'}, transparent);
+    background-image: linear-gradient(var(--tg-header-tint), var(--tg-header-tint));
+  }
+}
+
 // --- Transparent header ---------------------------------------------------------
 
 @if $transparent_header {

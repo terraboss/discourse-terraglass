@@ -44,6 +44,31 @@ header_blur:
   max: 20
   description: "Backdrop blur strength behind the transparent header, in pixels."
 
+header_tint:
+  type: bool
+  default: false
+  description: "Tint the header with an accent color. Off keeps the neutral header."
+
+header_tint_source:
+  type: enum
+  default: auto
+  choices:
+    - auto
+    - custom
+  description: "auto = follows the accent color of the active color scheme (adapts to light and dark). custom = uses the color below."
+
+header_tint_color:
+  type: string
+  default: "#c8401f"
+  description: "Tint color used when the source is set to custom. Any CSS color, e.g. #c8401f."
+
+header_tint_strength:
+  type: integer
+  default: 15
+  min: 0
+  max: 100
+  description: "How strongly the tint shows, in percent (0 = no tint, 100 = solid color)."
+
 pretty_tags:
   type: bool
   default: true
