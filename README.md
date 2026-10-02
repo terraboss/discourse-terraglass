@@ -5,6 +5,7 @@ A clean, modern Discourse theme built around translucent, frosted-glass surfaces
 ## Features
 
 - **Frosted glass look** — the header, sidebar and search field are semi-transparent with a soft blur, so the page shows through faintly instead of a solid bar. Opacity and blur strength are both adjustable.
+- **Glass menus and dialogs** — dropdown menus and dialogs share the frosted look, with a thin hairline edge and a faint highlight along the top. Behind a dialog the page is blurred instead of darkened. Opacity and blur are adjustable separately for menus and dialogs.
 - **Optional header tint** — give the header a subtle color of your choice. Either follows the accent color of the active color scheme (switching along with light/dark) or uses any custom color, with adjustable strength. In Safari, the browser's toolbar area is tinted to match. Off by default.
 - **Light and dark color schemes** — designed as a matching pair, not just one scheme inverted, and checked for good text contrast in both.
 - **Nicer link previews** — link cards (oneboxes) get a thin border and rounded corners, similar to how X/Twitter shows link previews.
@@ -59,6 +60,11 @@ No separate "dark mode" component needed — this is handled natively by Discour
 | `transparent_sidebar` | on | Semi-transparent, blurred sidebar/hamburger menu. |
 | `sidebar_opacity` | `80` | Sidebar opacity in %. Kept higher than the header so menu items stay legible. |
 | `sidebar_blur` | `3` | Sidebar backdrop blur strength (px). |
+| `glass_surfaces` | on | Frosted-glass look for dropdown menus and dialogs. |
+| `menu_opacity` | `65` | Opacity of glass dropdown menus in %. |
+| `menu_blur` | `6` | Backdrop blur strength behind dropdown menus (px). |
+| `dialog_opacity` | `80` | Opacity of glass dialogs in %. |
+| `dialog_blur` | `10` | Backdrop blur strength behind dialogs (px). |
 
 ## License
 

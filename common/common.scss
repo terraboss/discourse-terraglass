@@ -278,6 +278,144 @@ textarea {
   }
 }
 
+// --- Glass surfaces: dropdown menus and dialogs ----------------------------------
+
+@if tg-on($glass_surfaces) {
+  $tg-menu-bg: color-mix(in srgb, var(--secondary) #{$menu_opacity + '%'}, transparent);
+  $tg-menu-filter: blur(#{$menu_blur}px) saturate(1.3);
+  $tg-dialog-bg: color-mix(in srgb, var(--secondary) #{$dialog_opacity + '%'}, transparent);
+  $tg-dialog-filter: blur(#{$dialog_blur}px) saturate(1.3);
+
+  // The menu wrapper runs an entrance animation, which makes it the backdrop
+  // root for everything inside it. The blur therefore sits on the wrapper,
+  // while the inner element only carries the translucent background.
+  .fk-d-menu {
+    border-radius: var(--tg-radius);
+    -webkit-backdrop-filter: $tg-menu-filter;
+    backdrop-filter: $tg-menu-filter;
+  }
+
+  .fk-d-menu__inner-content {
+    background-color: $tg-menu-bg;
+  }
+
+  .select-kit.is-expanded .select-kit-body {
+    background: $tg-menu-bg;
+    -webkit-backdrop-filter: $tg-menu-filter;
+    backdrop-filter: $tg-menu-filter;
+  }
+
+  // Glass edge: a thin hairline around the surface plus a faint highlight
+  // along its top, which is what makes a translucent panel read as glass
+  // rather than as a faded box.
+  :root {
+    --tg-glass-edge: var(--primary-low-mid);
+    --tg-glass-highlight: rgb(255 255 255 / 0.6);
+  }
+
+  @container style(--scheme-type: dark) {
+    body {
+      --tg-glass-edge: #455262;
+      --tg-glass-highlight: rgb(255 255 255 / 0.1);
+    }
+  }
+
+  .fk-d-menu__inner-content,
+  .select-kit.is-expanded .select-kit-body {
+    border-color: var(--tg-glass-edge);
+    box-shadow: inset 0 1px 0 var(--tg-glass-highlight), var(--shadow-dropdown);
+  }
+
+  // Dialogs: modals (including the bottom sheets menus turn into on mobile)
+  // and confirmation dialogs.
+  .d-modal .d-modal__container,
+  .dialog-content {
+    background-color: $tg-dialog-bg;
+    -webkit-backdrop-filter: $tg-dialog-filter;
+    backdrop-filter: $tg-dialog-filter;
+    box-shadow:
+      0 0 0 1px var(--tg-glass-edge),
+      inset 0 1px 0 var(--tg-glass-highlight),
+      0 16px 48px rgb(0 0 0 / 0.16);
+  }
+
+  // Core dims the page behind a dialog with a heavy black overlay, which
+  // shows through the glass and turns it grey. Here the page is blurred
+  // instead of darkened. Core's entrance animation stops at 60% opacity,
+  // which would leave the blur half-applied, so it is replaced by one that
+  // runs to full opacity; the exit animation is left to core.
+  @keyframes tg-backdrop-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .d-modal__backdrop {
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+
+    &:not(.is-exiting) {
+      animation: tg-backdrop-in 0.3s forwards;
+    }
+  }
+
+  .dialog-overlay {
+    background: transparent;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+
+  // Notices inside a dialog (warnings, errors, hints) have opaque backgrounds
+  // in core, which would sit on the glass as solid bars.
+  .d-modal .alert {
+    background-color: color-mix(in srgb, var(--danger-low) 65%, transparent);
+
+    &.alert-success {
+      background-color: color-mix(in srgb, var(--success-low) 65%, transparent);
+    }
+
+    &.alert-warning {
+      background-color: color-mix(in srgb, var(--highlight-bg) 65%, transparent);
+    }
+
+    &.alert-info {
+      background-color: color-mix(in srgb, var(--tertiary-low) 65%, transparent);
+    }
+  }
+
+  // Core's hover and selection highlights are opaque colors, which would
+  // punch solid blocks into the glass. Redefining the variables locally keeps
+  // every row highlight inside these surfaces translucent.
+  .fk-d-menu,
+  .fk-d-menu-modal,
+  .select-kit .select-kit-body {
+    --d-hover: color-mix(in srgb, var(--primary) 8%, transparent);
+    --d-selected: color-mix(in srgb, var(--tertiary) 18%, transparent);
+    --d-selected-hover: color-mix(in srgb, var(--tertiary) 26%, transparent);
+  }
+  // Menu rows get the translucent highlight explicitly as well, since not
+  // every Discourse version routes their hover state through --d-hover.
+  .fk-d-menu .dropdown-menu__item .btn,
+  .fk-d-menu-modal .dropdown-menu__item .btn {
+    &:hover,
+    &:focus-visible,
+    &.-selected,
+    &.is-selected {
+      background: color-mix(in srgb, var(--primary) 8%, transparent) !important;
+    }
+
+    &.btn-danger:hover,
+    &.btn-danger:focus-visible {
+      background: color-mix(in srgb, var(--danger) 12%, transparent) !important;
+    }
+  }
+}
+
 // --- Tags as flag-shaped labels --------------------------------------------------
 
 @if tg-on($pretty_tags) {

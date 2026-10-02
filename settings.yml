@@ -109,3 +109,36 @@ sidebar_blur:
   min: 0
   max: 20
   description: "Backdrop blur strength behind the sidebar, in pixels."
+
+glass_surfaces:
+  type: bool
+  default: true
+  description: "Frosted-glass look for floating surfaces such as dropdown menus and dialogs."
+
+menu_opacity:
+  type: integer
+  default: 65
+  min: 40
+  max: 100
+  description: "Opacity of glass dropdown menus in percent. Lower lets more of the page show through."
+
+menu_blur:
+  type: integer
+  default: 6
+  min: 0
+  max: 30
+  description: "Backdrop blur strength behind glass dropdown menus, in pixels."
+
+dialog_opacity:
+  type: integer
+  default: 80
+  min: 50
+  max: 100
+  description: "Opacity of glass dialogs in percent. Higher keeps forms and text on them easier to read."
+
+dialog_blur:
+  type: integer
+  default: 10
+  min: 0
+  max: 30
+  description: "Backdrop blur strength behind glass dialogs, in pixels."
