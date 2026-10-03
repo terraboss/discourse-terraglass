@@ -1,0 +1,32 @@
+fr:
+  theme_metadata:
+    description: "Effet verre dépoli pour l'en-tête, la barre latérale, les menus, les boîtes de dialogue et les cartes, avec des schémas de couleurs clair et sombre assortis."
+    settings:
+      corner_radius: "Arrondi des angles des boutons, cartes et champs de saisie, en pixels (0 = angles droits)."
+      topic_list_zebra: "Rayures zébrées discrètes et effet de survol dans la liste des sujets."
+      hide_subcategories_in_hamburger: "Masquer les sous-catégories dans le menu hamburger classique. Généralement inutile quand la barre latérale est active."
+      composer_accent: "Colorer la poignée de redimensionnement de l'éditeur avec la couleur d'accentuation."
+      hide_uncategorized_in_menu: "Masquer l'entrée « Non catégorisé » du menu hamburger (les sujets restent visibles dans les listes)."
+      transparent_header: "En-tête semi-transparent avec effet de flou (le contenu transparaît légèrement)."
+      header_opacity: "Opacité de l'en-tête en pourcentage (100 = opaque, plus bas = plus transparent)."
+      header_blur: "Intensité du flou d'arrière-plan derrière l'en-tête transparent, en pixels."
+      header_tint: "Teinter l'en-tête avec une couleur d'accentuation. Désactivé, l'en-tête reste neutre."
+      header_tint_source:
+        description: "auto = suit la couleur d'accentuation du schéma de couleurs actif (s'adapte au clair et au sombre). custom = utilise la couleur ci-dessous."
+        choices:
+          auto: "Automatique (couleur d'accentuation)"
+          custom: "Couleur personnalisée"
+      header_tint_color: "Couleur de teinte utilisée lorsque la source est définie sur custom. Toute couleur CSS, par ex. #c8401f."
+      header_tint_strength: "Intensité de la teinte, en pourcentage (0 = aucune teinte, 100 = couleur pleine)."
+      pretty_tags: "Afficher les étiquettes sous forme de flèches/fanions (les couleurs suivent le schéma actif, y compris en mode sombre)."
+      pretty_videos: "Afficher les vidéos intégrées (YouTube et autres oneboxes vidéo) au format fixe 16:9 sur tous les appareils."
+      pretty_oneboxes: "Afficher les aperçus de liens (oneboxes, p. ex. Wikipédia) sous forme de cartes arrondies à fine bordure, dans un style proche de X/Twitter."
+      onebox_radius: "Rayon des angles des cartes onebox, en pixels."
+      transparent_sidebar: "Barre latérale/menu hamburger semi-transparent avec effet de flou, assorti à l'en-tête."
+      sidebar_opacity: "Opacité de la barre latérale en pourcentage. Supérieure à celle de l'en-tête pour que les entrées du menu restent lisibles."
+      sidebar_blur: "Intensité du flou d'arrière-plan derrière la barre latérale, en pixels."
+      glass_surfaces: "Effet verre dépoli pour les surfaces flottantes comme les menus déroulants, les boîtes de dialogue, les cartes d'utilisateur et les commandes flottantes."
+      menu_opacity: "Opacité des menus déroulants en verre, en pourcentage. Plus bas, la page transparaît davantage."
+      menu_blur: "Intensité du flou d'arrière-plan derrière les menus déroulants en verre, en pixels."
+      dialog_opacity: "Opacité des boîtes de dialogue en verre, en pourcentage. Plus haut, les formulaires et le texte restent plus lisibles."
+      dialog_blur: "Intensité du flou d'arrière-plan derrière les boîtes de dialogue en verre, en pixels."

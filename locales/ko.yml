@@ -1,0 +1,32 @@
+ko:
+  theme_metadata:
+    description: "헤더, 사이드바, 메뉴, 대화상자, 카드에 간유리 느낌을 적용하고, 어울리는 라이트/다크 색 구성표를 제공합니다."
+    settings:
+      corner_radius: "버튼, 카드, 입력란의 모서리 둥글기(픽셀, 0 = 각진 모서리)."
+      topic_list_zebra: "주제 목록에 은은한 얼룩말 줄무늬와 마우스오버 효과를 적용합니다."
+      hide_subcategories_in_hamburger: "기본 햄버거 메뉴에서 하위 카테고리를 숨깁니다. 사이드바가 활성화되어 있으면 보통 필요하지 않습니다."
+      composer_accent: "편집기의 크기 조절 핸들을 강조 색상으로 표시합니다."
+      hide_uncategorized_in_menu: "햄버거 메뉴에서 '미분류' 항목을 숨깁니다(주제는 목록에 계속 표시됩니다)."
+      transparent_header: "흐림 효과가 적용된 반투명 헤더입니다(콘텐츠가 희미하게 비쳐 보입니다)."
+      header_opacity: "헤더 불투명도(퍼센트, 100 = 불투명, 낮을수록 더 투명)."
+      header_blur: "투명 헤더 뒤 배경 흐림 강도(픽셀)."
+      header_tint: "헤더에 강조 색상으로 색조를 입힙니다. 끄면 헤더가 중립 색상으로 유지됩니다."
+      header_tint_source:
+        description: "auto = 현재 색 구성표의 강조 색상을 따릅니다(라이트/다크에 맞게 자동 조정). custom = 아래 색상을 사용합니다."
+        choices:
+          auto: "자동(강조 색상)"
+          custom: "사용자 지정 색상"
+      header_tint_color: "소스가 custom일 때 사용하는 색조 색상. 모든 CSS 색상 사용 가능(예: #c8401f)."
+      header_tint_strength: "색조가 보이는 강도(퍼센트, 0 = 색조 없음, 100 = 단색)."
+      pretty_tags: "태그를 화살표/깃발 모양 라벨로 표시합니다(색상은 다크 모드를 포함해 현재 색 구성표를 따릅니다)."
+      pretty_videos: "삽입된 동영상(YouTube 및 기타 동영상 onebox)을 모든 기기에서 16:9 고정 비율로 표시합니다."
+      pretty_oneboxes: "링크 미리보기(Wikipedia 등의 onebox)를 얇은 테두리의 둥근 카드로, X/Twitter와 비슷한 스타일로 표시합니다."
+      onebox_radius: "onebox 카드의 모서리 반경(픽셀)."
+      transparent_sidebar: "흐림 효과가 적용된 반투명 사이드바/햄버거 메뉴로, 헤더와 어울리게 합니다."
+      sidebar_opacity: "사이드바 불투명도(퍼센트). 메뉴 항목이 잘 읽히도록 헤더보다 높게 설정합니다."
+      sidebar_blur: "사이드바 뒤 배경 흐림 강도(픽셀)."
+      glass_surfaces: "드롭다운 메뉴, 대화상자, 사용자 카드, 떠 있는 컨트롤 같은 플로팅 영역에 간유리 느낌을 적용합니다."
+      menu_opacity: "유리 효과 드롭다운 메뉴의 불투명도(퍼센트). 낮을수록 페이지가 더 비쳐 보입니다."
+      menu_blur: "유리 효과 드롭다운 메뉴 뒤 배경 흐림 강도(픽셀)."
+      dialog_opacity: "유리 효과 대화상자의 불투명도(퍼센트). 높을수록 양식과 텍스트를 읽기 쉽습니다."
+      dialog_blur: "유리 효과 대화상자 뒤 배경 흐림 강도(픽셀)."

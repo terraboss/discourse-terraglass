@@ -1,0 +1,32 @@
+de:
+  theme_metadata:
+    description: "Milchglas-Look für Header, Seitenleiste, Menüs, Dialoge und Karten, mit passenden hellen und dunklen Farbschemas."
+    settings:
+      corner_radius: "Eckenrundung von Buttons, Karten und Eingabefeldern in Pixeln (0 = eckig)."
+      topic_list_zebra: "Dezente Zebra-Streifen und Hover-Effekt in der Themenliste."
+      hide_subcategories_in_hamburger: "Unterkategorien im klassischen Hamburger-Menü ausblenden. Meist überflüssig, wenn die Seitenleiste aktiv ist."
+      composer_accent: "Den Größenänderungs-Griff des Editors in der Akzentfarbe einfärben."
+      hide_uncategorized_in_menu: "Den Eintrag „Ohne Kategorie“ im Hamburger-Menü ausblenden (Themen bleiben in den Listen sichtbar)."
+      transparent_header: "Halbtransparenter Header mit Unschärfe-Effekt (der Inhalt scheint leicht durch)."
+      header_opacity: "Deckkraft des Headers in Prozent (100 = undurchsichtig, niedriger = transparenter)."
+      header_blur: "Stärke der Hintergrundunschärfe hinter dem transparenten Header in Pixeln."
+      header_tint: "Den Header mit der Akzentfarbe tönen. Aus lässt den Header neutral."
+      header_tint_source:
+        description: "auto = folgt der Akzentfarbe des aktiven Farbschemas (passt sich an Hell und Dunkel an). custom = nutzt die Farbe darunter."
+        choices:
+          auto: "Automatisch (Akzentfarbe)"
+          custom: "Eigene Farbe"
+      header_tint_color: "Tönungsfarbe, wenn die Quelle auf custom steht. Jede CSS-Farbe, z. B. #c8401f."
+      header_tint_strength: "Wie stark die Tönung sichtbar ist, in Prozent (0 = keine Tönung, 100 = volle Farbe)."
+      pretty_tags: "Tags als pfeil-/fahnenförmige Labels darstellen (Farben folgen dem aktiven Farbschema, auch im Dunkelmodus)."
+      pretty_videos: "Eingebettete Videos (YouTube und andere Video-Oneboxes) auf jedem Gerät im festen Format 16:9 anzeigen."
+      pretty_oneboxes: "Link-Vorschauen (Oneboxes, z. B. Wikipedia) als abgerundete Karten mit feinem Rand darstellen, ähnlich wie bei X/Twitter."
+      onebox_radius: "Eckenradius der Onebox-Karten in Pixeln."
+      transparent_sidebar: "Halbtransparente Seitenleiste bzw. Hamburger-Menü mit Unschärfe-Effekt, passend zum Header."
+      sidebar_opacity: "Deckkraft der Seitenleiste in Prozent. Höher als beim Header, damit Menüeinträge lesbar bleiben."
+      sidebar_blur: "Stärke der Hintergrundunschärfe hinter der Seitenleiste in Pixeln."
+      glass_surfaces: "Milchglas-Look für schwebende Flächen wie Dropdown-Menüs, Dialoge, Benutzerkarten und schwebende Bedienelemente."
+      menu_opacity: "Deckkraft der gläsernen Dropdown-Menüs in Prozent. Niedriger lässt mehr von der Seite durchscheinen."
+      menu_blur: "Stärke der Hintergrundunschärfe hinter gläsernen Dropdown-Menüs in Pixeln."
+      dialog_opacity: "Deckkraft der gläsernen Dialoge in Prozent. Höher hält Formulare und Text darauf leichter lesbar."
+      dialog_blur: "Stärke der Hintergrundunschärfe hinter gläsernen Dialogen in Pixeln."

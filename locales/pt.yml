@@ -1,0 +1,32 @@
+pt:
+  theme_metadata:
+    description: "Efeito de vidro fosco para o cabeçalho, a barra lateral, os menus, os diálogos e os cartões, com esquemas de cores claro e escuro combinando."
+    settings:
+      corner_radius: "Arredondamento dos cantos de botões, cartões e campos de entrada, em pixels (0 = cantos retos)."
+      topic_list_zebra: "Listras de zebra discretas e efeito ao passar o cursor na lista de tópicos."
+      hide_subcategories_in_hamburger: "Ocultar as subcategorias no menu hambúrguer clássico. Geralmente desnecessário quando a barra lateral está ativa."
+      composer_accent: "Colorir a alça de redimensionamento do editor com a cor de destaque."
+      hide_uncategorized_in_menu: "Ocultar a entrada «Sem categoria» do menu hambúrguer (os tópicos continuam visíveis nas listas)."
+      transparent_header: "Cabeçalho semitransparente com efeito de desfoque (o conteúdo aparece levemente através dele)."
+      header_opacity: "Opacidade do cabeçalho em % (100 = opaco, menos = mais transparente)."
+      header_blur: "Intensidade do desfoque de fundo atrás do cabeçalho transparente, em pixels."
+      header_tint: "Aplicar uma tonalidade com a cor de destaque ao cabeçalho. Desativado mantém o cabeçalho neutro."
+      header_tint_source:
+        description: "auto = segue a cor de destaque do esquema de cores ativo (adapta-se a claro e escuro). custom = usa a cor indicada abaixo."
+        choices:
+          auto: "Automático (cor de destaque)"
+          custom: "Cor personalizada"
+      header_tint_color: "Cor da tonalidade usada quando a origem está definida como custom. Qualquer cor CSS, p. ex. #c8401f."
+      header_tint_strength: "Intensidade da tonalidade, em % (0 = sem tonalidade, 100 = cor sólida)."
+      pretty_tags: "Mostrar as etiquetas em forma de seta/bandeira (as cores seguem o esquema ativo, incluindo o modo escuro)."
+      pretty_videos: "Mostrar vídeos incorporados (YouTube e outros oneboxes de vídeo) com proporção fixa de 16:9 em todos os dispositivos."
+      pretty_oneboxes: "Mostrar as pré-visualizações de links (oneboxes, p. ex. Wikipédia) como cartões arredondados com borda fina, num estilo semelhante ao X/Twitter."
+      onebox_radius: "Raio dos cantos dos cartões onebox, em pixels."
+      transparent_sidebar: "Barra lateral/menu hambúrguer semitransparente com efeito de desfoque, a condizer com o cabeçalho."
+      sidebar_opacity: "Opacidade da barra lateral em %. Mais alta do que a do cabeçalho para que as entradas do menu continuem legíveis."
+      sidebar_blur: "Intensidade do desfoque de fundo atrás da barra lateral, em pixels."
+      glass_surfaces: "Efeito de vidro fosco para superfícies flutuantes como menus suspensos, diálogos, cartões de perfil e botões flutuantes."
+      menu_opacity: "Opacidade dos menus suspensos de vidro em %. Um valor menor deixa transparecer mais da página."
+      menu_blur: "Intensidade do desfoque de fundo atrás dos menus suspensos de vidro, em pixels."
+      dialog_opacity: "Opacidade dos diálogos de vidro em %. Um valor maior facilita a leitura de formulários e texto."
+      dialog_blur: "Intensidade do desfoque de fundo atrás dos diálogos de vidro, em pixels."

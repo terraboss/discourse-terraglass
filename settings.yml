@@ -113,7 +113,7 @@ sidebar_blur:
 glass_surfaces:
   type: bool
   default: true
-  description: "Frosted-glass look for floating surfaces such as dropdown menus and dialogs."
+  description: "Frosted-glass look for floating surfaces such as dropdown menus, dialogs, user cards and floating controls."
 
 menu_opacity:
   type: integer

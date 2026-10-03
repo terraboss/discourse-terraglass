@@ -1,0 +1,32 @@
+zh_CN:
+  theme_metadata:
+    description: "为页眉、侧边栏、菜单、对话框和卡片提供毛玻璃效果，并配有协调的浅色和深色配色方案。"
+    settings:
+      corner_radius: "按钮、卡片和输入框的圆角大小（像素，0 = 直角）。"
+      topic_list_zebra: "主题列表中柔和的斑马条纹和悬停效果。"
+      hide_subcategories_in_hamburger: "在经典汉堡菜单中隐藏子分类。启用侧边栏后通常不再需要。"
+      composer_accent: "用强调色显示编辑器的调整大小手柄。"
+      hide_uncategorized_in_menu: "在汉堡菜单中隐藏“未分类”条目（主题仍会显示在列表中）。"
+      transparent_header: "带模糊效果的半透明页眉（内容会隐约透出）。"
+      header_opacity: "页眉不透明度（百分比，100 = 不透明，越低越透明）。"
+      header_blur: "透明页眉后方的背景模糊强度（像素）。"
+      header_tint: "用强调色为页眉着色。关闭时页眉保持中性。"
+      header_tint_source:
+        description: "auto = 跟随当前配色方案的强调色（自动适应浅色和深色）。custom = 使用下方的颜色。"
+        choices:
+          auto: "自动（强调色）"
+          custom: "自定义颜色"
+      header_tint_color: "来源设为 custom 时使用的着色颜色。可用任意 CSS 颜色，例如 #c8401f。"
+      header_tint_strength: "着色的显示强度（百分比，0 = 无着色，100 = 纯色）。"
+      pretty_tags: "将标签显示为箭头/旗帜形状（颜色跟随当前配色方案，包括深色模式）。"
+      pretty_videos: "在所有设备上以固定的 16:9 比例显示嵌入视频（YouTube 及其他视频 onebox）。"
+      pretty_oneboxes: "将链接预览（onebox，如维基百科）显示为带细边框的圆角卡片，风格类似 X/Twitter。"
+      onebox_radius: "onebox 卡片的圆角半径（像素）。"
+      transparent_sidebar: "带模糊效果的半透明侧边栏/汉堡菜单，与页眉保持一致。"
+      sidebar_opacity: "侧边栏不透明度（百分比）。比页眉更高，以保证菜单项清晰易读。"
+      sidebar_blur: "侧边栏后方的背景模糊强度（像素）。"
+      glass_surfaces: "为下拉菜单、对话框、用户卡片和悬浮控件等浮动界面启用毛玻璃效果。"
+      menu_opacity: "毛玻璃下拉菜单的不透明度（百分比）。越低，页面透出越多。"
+      menu_blur: "毛玻璃下拉菜单后方的背景模糊强度（像素）。"
+      dialog_opacity: "毛玻璃对话框的不透明度（百分比）。越高，表单和文字越易阅读。"
+      dialog_blur: "毛玻璃对话框后方的背景模糊强度（像素）。"

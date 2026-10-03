@@ -78,7 +78,7 @@ No separate "dark mode" component needed — this is handled natively by Discour
 | `transparent_sidebar` | on | Semi-transparent, blurred sidebar/hamburger menu. |
 | `sidebar_opacity` | `80` | Sidebar opacity in %. Kept higher than the header so menu items stay legible. |
 | `sidebar_blur` | `3` | Sidebar backdrop blur strength (px). |
-| `glass_surfaces` | on | Frosted-glass look for dropdown menus and dialogs. |
+| `glass_surfaces` | on | Frosted-glass look for dropdown menus, dialogs, user cards and floating controls. |
 | `menu_opacity` | `65` | Opacity of glass dropdown menus in %. |
 | `menu_blur` | `6` | Backdrop blur strength behind dropdown menus (px). |
 | `dialog_opacity` | `80` | Opacity of glass dialogs in %. |

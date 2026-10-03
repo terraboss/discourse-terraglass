@@ -1,0 +1,32 @@
+es:
+  theme_metadata:
+    description: "Aspecto de cristal esmerilado para la cabecera, la barra lateral, los menús, los diálogos y las tarjetas, con esquemas de color claro y oscuro a juego."
+    settings:
+      corner_radius: "Redondeo de las esquinas de botones, tarjetas y campos de entrada, en píxeles (0 = esquinas rectas)."
+      topic_list_zebra: "Rayas de cebra discretas y efecto al pasar el cursor en la lista de temas."
+      hide_subcategories_in_hamburger: "Ocultar las subcategorías en el menú hamburguesa clásico. Normalmente innecesario cuando la barra lateral está activa."
+      composer_accent: "Colorear el control de cambio de tamaño del editor con el color de acento."
+      hide_uncategorized_in_menu: "Ocultar la entrada «Sin categoría» del menú hamburguesa (los temas siguen visibles en las listas)."
+      transparent_header: "Cabecera semitransparente con efecto de desenfoque (el contenido se transparenta ligeramente)."
+      header_opacity: "Opacidad de la cabecera en porcentaje (100 = opaca, menos = más transparente)."
+      header_blur: "Intensidad del desenfoque de fondo detrás de la cabecera transparente, en píxeles."
+      header_tint: "Teñir la cabecera con un color de acento. Desactivado mantiene la cabecera neutra."
+      header_tint_source:
+        description: "auto = sigue el color de acento del esquema de color activo (se adapta a claro y oscuro). custom = usa el color indicado abajo."
+        choices:
+          auto: "Automático (color de acento)"
+          custom: "Color personalizado"
+      header_tint_color: "Color del tinte cuando el origen está en custom. Cualquier color CSS, p. ej. #c8401f."
+      header_tint_strength: "Intensidad del tinte, en porcentaje (0 = sin tinte, 100 = color sólido)."
+      pretty_tags: "Mostrar las etiquetas con forma de flecha o bandera (los colores siguen el esquema activo, también en modo oscuro)."
+      pretty_videos: "Mostrar los vídeos incrustados (YouTube y otros oneboxes de vídeo) con proporción fija 16:9 en todos los dispositivos."
+      pretty_oneboxes: "Mostrar las vistas previas de enlaces (oneboxes, p. ej. Wikipedia) como tarjetas redondeadas con borde fino, al estilo de X/Twitter."
+      onebox_radius: "Radio de las esquinas de las tarjetas onebox, en píxeles."
+      transparent_sidebar: "Barra lateral/menú hamburguesa semitransparente con efecto de desenfoque, a juego con la cabecera."
+      sidebar_opacity: "Opacidad de la barra lateral en porcentaje. Más alta que la de la cabecera para que las entradas del menú sigan siendo legibles."
+      sidebar_blur: "Intensidad del desenfoque de fondo detrás de la barra lateral, en píxeles."
+      glass_surfaces: "Aspecto de cristal esmerilado para superficies flotantes como menús desplegables, diálogos, tarjetas de usuario y controles flotantes."
+      menu_opacity: "Opacidad de los menús desplegables de cristal en porcentaje. Un valor menor deja ver más de la página."
+      menu_blur: "Intensidad del desenfoque de fondo detrás de los menús desplegables de cristal, en píxeles."
+      dialog_opacity: "Opacidad de los diálogos de cristal en porcentaje. Un valor mayor facilita la lectura de formularios y texto."
+      dialog_blur: "Intensidad del desenfoque de fondo detrás de los diálogos de cristal, en píxeles."

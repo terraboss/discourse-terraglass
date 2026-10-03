@@ -1,0 +1,32 @@
+it:
+  theme_metadata:
+    description: "Effetto vetro smerigliato per intestazione, barra laterale, menu, finestre di dialogo e schede, con combinazioni di colori chiare e scure coordinate."
+    settings:
+      corner_radius: "Arrotondamento degli angoli di pulsanti, schede e campi di input, in pixel (0 = angoli retti)."
+      topic_list_zebra: "Righe a zebra discrete ed effetto al passaggio del mouse nell'elenco degli argomenti."
+      hide_subcategories_in_hamburger: "Nascondi le sottocategorie nel menu hamburger classico. Di solito superfluo quando la barra laterale è attiva."
+      composer_accent: "Colora la maniglia di ridimensionamento dell'editor con il colore di accento."
+      hide_uncategorized_in_menu: "Nascondi la voce «Senza categoria» dal menu hamburger (gli argomenti restano visibili negli elenchi)."
+      transparent_header: "Intestazione semitrasparente con effetto sfocatura (il contenuto traspare leggermente)."
+      header_opacity: "Opacità dell'intestazione in percentuale (100 = opaca, più basso = più trasparente)."
+      header_blur: "Intensità della sfocatura dello sfondo dietro l'intestazione trasparente, in pixel."
+      header_tint: "Tinge l'intestazione con un colore di accento. Disattivato mantiene l'intestazione neutra."
+      header_tint_source:
+        description: "auto = segue il colore di accento della combinazione di colori attiva (si adatta a chiaro e scuro). custom = usa il colore indicato sotto."
+        choices:
+          auto: "Automatico (colore di accento)"
+          custom: "Colore personalizzato"
+      header_tint_color: "Colore della tinta usato quando l'origine è impostata su custom. Qualsiasi colore CSS, ad es. #c8401f."
+      header_tint_strength: "Intensità della tinta, in percentuale (0 = nessuna tinta, 100 = colore pieno)."
+      pretty_tags: "Mostra i tag come etichette a forma di freccia/bandiera (i colori seguono la combinazione di colori attiva, anche in modalità scura)."
+      pretty_videos: "Mostra i video incorporati (YouTube e altri onebox video) con rapporto fisso 16:9 su ogni dispositivo."
+      pretty_oneboxes: "Mostra le anteprime dei link (onebox, ad es. Wikipedia) come schede arrotondate con bordo sottile, in stile simile a X/Twitter."
+      onebox_radius: "Raggio degli angoli delle schede onebox, in pixel."
+      transparent_sidebar: "Barra laterale/menu hamburger semitrasparente con effetto sfocatura, in linea con l'intestazione."
+      sidebar_opacity: "Opacità della barra laterale in percentuale. Più alta di quella dell'intestazione, così le voci di menu restano leggibili."
+      sidebar_blur: "Intensità della sfocatura dello sfondo dietro la barra laterale, in pixel."
+      glass_surfaces: "Effetto vetro smerigliato per le superfici flottanti come menu a discesa, finestre di dialogo, schede utente e controlli flottanti."
+      menu_opacity: "Opacità dei menu a discesa in vetro in percentuale. Più bassa lascia trasparire più della pagina."
+      menu_blur: "Intensità della sfocatura dello sfondo dietro i menu a discesa in vetro, in pixel."
+      dialog_opacity: "Opacità delle finestre di dialogo in vetro in percentuale. Più alta rende moduli e testo più leggibili."
+      dialog_blur: "Intensità della sfocatura dello sfondo dietro le finestre di dialogo in vetro, in pixel."

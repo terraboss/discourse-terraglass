@@ -1,0 +1,32 @@
+en:
+  theme_metadata:
+    description: "Frosted-glass look for the header, sidebar, menus, dialogs and cards, with matching light and dark color schemes."
+    settings:
+      corner_radius: "Corner rounding of buttons, cards and inputs, in pixels (0 = square)."
+      topic_list_zebra: "Subtle zebra striping and hover effect on the topic list."
+      hide_subcategories_in_hamburger: "Hide subcategories in the classic hamburger menu. Usually unneeded once the sidebar is active."
+      composer_accent: "Color the composer's resize handle in the accent color."
+      hide_uncategorized_in_menu: "Hide the \"Uncategorized\" entry from the hamburger menu (topics stay visible in lists)."
+      transparent_header: "Semi-transparent header with a blur effect (content shows faintly through it)."
+      header_opacity: "Header opacity in percent (100 = opaque, lower = more transparent)."
+      header_blur: "Backdrop blur strength behind the transparent header, in pixels."
+      header_tint: "Tint the header with an accent color. Off keeps the neutral header."
+      header_tint_source:
+        description: "auto = follows the accent color of the active color scheme (adapts to light and dark). custom = uses the color below."
+        choices:
+          auto: "Automatic (accent color)"
+          custom: "Custom color"
+      header_tint_color: "Tint color used when the source is set to custom. Any CSS color, e.g. #c8401f."
+      header_tint_strength: "How strongly the tint shows, in percent (0 = no tint, 100 = solid color)."
+      pretty_tags: "Render tags as arrow/flag-shaped labels (colors follow the active color scheme, including dark mode)."
+      pretty_videos: "Show embedded videos (YouTube and other video oneboxes) at a fixed 16:9 ratio on every device."
+      pretty_oneboxes: "Render link previews (oneboxes, e.g. Wikipedia) as hairline-bordered, rounded cards, in an X/Twitter-like style."
+      onebox_radius: "Corner radius of onebox cards, in pixels."
+      transparent_sidebar: "Semi-transparent sidebar/hamburger menu with a blur effect, matching the header."
+      sidebar_opacity: "Sidebar opacity in percent. Kept higher than the header so menu items stay legible."
+      sidebar_blur: "Backdrop blur strength behind the sidebar, in pixels."
+      glass_surfaces: "Frosted-glass look for floating surfaces such as dropdown menus, dialogs, user cards and floating controls."
+      menu_opacity: "Opacity of glass dropdown menus in percent. Lower lets more of the page show through."
+      menu_blur: "Backdrop blur strength behind glass dropdown menus, in pixels."
+      dialog_opacity: "Opacity of glass dialogs in percent. Higher keeps forms and text on them easier to read."
+      dialog_blur: "Backdrop blur strength behind glass dialogs, in pixels."
