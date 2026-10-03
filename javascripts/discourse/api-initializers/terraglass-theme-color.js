@@ -8,6 +8,12 @@ export default apiInitializer((api) => {
     return;
   }
 
+  // Without color-mix() support the computed color below would silently come
+  // out transparent (and be written as black), so leave the meta tags alone.
+  if (!window.CSS?.supports?.("color", "color-mix(in srgb, red 50%, blue)")) {
+    return;
+  }
+
   const tint = resolveTint();
   const opacity = settings.transparent_header ? settings.header_opacity : 100;
   const strength = settings.header_tint_strength;
@@ -19,12 +25,19 @@ export default apiInitializer((api) => {
   const canvas = document.createElement("canvas");
   canvas.width = canvas.height = 1;
   const ctx = canvas.getContext("2d", { willReadFrequently: true });
+  if (!ctx) {
+    probe.remove();
+    return;
+  }
 
   // Same layering as the CSS: tint over the (semi-transparent) header
   // background over the page background.
   const computeColor = () => {
     probe.style.backgroundColor = `color-mix(in srgb, ${tint} ${strength}%, color-mix(in srgb, var(--header_background) ${opacity}%, var(--secondary)))`;
     const value = getComputedStyle(probe).backgroundColor;
+    if (!value || value === "rgba(0, 0, 0, 0)" || value === "transparent") {
+      return null;
+    }
     ctx.clearRect(0, 0, 1, 1);
     ctx.fillStyle = value;
     ctx.fillRect(0, 0, 1, 1);
@@ -39,6 +52,10 @@ export default apiInitializer((api) => {
     }
     applying = true;
     const color = computeColor();
+    if (!color) {
+      applying = false;
+      return;
+    }
     document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => {
       if (meta.getAttribute("content") !== color) {
         meta.setAttribute("content", color);

@@ -101,7 +101,7 @@ sidebar_opacity:
   default: 80
   min: 50
   max: 100
-  description: "Sidebar opacity in percent. Kept lower than the header so menu items stay legible."
+  description: "Sidebar opacity in percent. Kept higher than the header so menu items stay legible."
 
 sidebar_blur:
   type: integer
