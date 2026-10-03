@@ -14,6 +14,7 @@ A clean, modern Discourse theme built around translucent, frosted-glass surfaces
 - **Striped topic list** with a subtle hover highlight.
 - **Adjustable corner rounding** across buttons, cards, modals and input fields.
 - **Clear focus outline** for keyboard navigation, using the scheme's own text color so it's always visible.
+- **Translated settings** — the admin descriptions of all settings are available in Arabic, German, English, Spanish, French, Italian, Japanese, Korean, Portuguese, Russian and Simplified Chinese. Corrections from native speakers are welcome.
 - Every feature above is a theme setting — turn off or fine-tune anything you don't want.
 
 ## Screenshots
