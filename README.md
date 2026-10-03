@@ -16,6 +16,24 @@ A clean, modern Discourse theme built around translucent, frosted-glass surfaces
 - **Clear focus outline** for keyboard navigation, using the scheme's own text color so it's always visible.
 - Every feature above is a theme setting — turn off or fine-tune anything you don't want.
 
+## Screenshots
+
+Light color scheme, shown on a Discourse forum.
+
+**Notifications menu** — translucent, with the page showing through:
+
+![Notifications menu](screenshots/terraglass-notifications-menu.png)
+
+**Search dropdown** — frosted field and results panel:
+
+![Search dropdown](screenshots/terraglass-search-dropdown.png)
+
+**Dialogs** — the page behind is blurred instead of darkened:
+
+![Keyboard shortcuts dialog](screenshots/terraglass-dialog-shortcuts.png)
+
+![Flag dialog](screenshots/terraglass-dialog-flag.png)
+
 ## Installation
 
 In your Discourse admin, go to *Customize → Themes → Install → From a git repository* and paste:
