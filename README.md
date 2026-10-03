@@ -5,7 +5,7 @@ A clean, modern Discourse theme built around translucent, frosted-glass surfaces
 ## Features
 
 - **Frosted glass look** — the header, sidebar and search field are semi-transparent with a soft blur, so the page shows through faintly instead of a solid bar. Opacity and blur strength are both adjustable.
-- **Glass menus and dialogs** — dropdown menus and dialogs share the frosted look, with a thin hairline edge and a faint highlight along the top. Behind a dialog the page is blurred instead of darkened. Opacity and blur are adjustable separately for menus and dialogs.
+- **Glass menus, dialogs and user cards** — dropdown menus, dialogs and user/group cards share the frosted look, with a thin hairline edge and a faint highlight along the top. Behind a dialog the page is blurred instead of darkened, and a profile background image on a user card stays visible. Opacity and blur are adjustable separately for menus and dialogs.
 - **Optional header tint** — give the header a subtle color of your choice. Either follows the accent color of the active color scheme (switching along with light/dark) or uses any custom color, with adjustable strength. In Safari, the browser's toolbar area is tinted to match. Off by default.
 - **Light and dark color schemes** — designed as a matching pair, not just one scheme inverted, and checked for good text contrast in both.
 - **Nicer link previews** — link cards (oneboxes) get a thin border and rounded corners, similar to how X/Twitter shows link previews.

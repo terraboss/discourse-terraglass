@@ -414,6 +414,37 @@ textarea {
       background: color-mix(in srgb, var(--danger) 12%, transparent) !important;
     }
   }
+
+  // User and group cards sit inside the menu wrapper but paint their own
+  // solid background. Without a profile background image the card is simply
+  // made translucent; with one, the image stays visible and the card content
+  // only carries a lighter veil for legibility.
+  #user-card.user-card,
+  #group-card.group-card {
+    background-color: transparent;
+    border-radius: inherit;
+  }
+
+  #user-card.user-card .card-content,
+  #group-card.group-card .card-content {
+    background-color: color-mix(in srgb, var(--secondary) 70%, transparent);
+    border-radius: inherit;
+  }
+
+  #user-card.user-card:not([style*="background-image"]) .card-content,
+  #group-card.group-card:not([style*="background-image"]) .card-content {
+    background-color: transparent;
+  }
+
+  #user-card .user-badge,
+  #group-card .user-badge {
+    background-color: color-mix(in srgb, var(--primary) 7%, transparent);
+  }
+
+  #user-card .btn-default,
+  #group-card .btn-default {
+    background-color: color-mix(in srgb, var(--secondary) 55%, transparent);
+  }
 }
 
 // --- Tags as flag-shaped labels --------------------------------------------------
